@@ -3,6 +3,7 @@
 
 #include "Stack.hpp"
 #include <iostream>
+
 using namespace std;
 
 template <typename T>
@@ -13,7 +14,10 @@ class ArrayStack : public Stack<T> {
 
         // the maximum number of elements in the stack
         int maxSize;
-
+        
+        // the current number of elements in the stack
+        int length;
+        
         // copy the state of the argument stack to `this`
         void copy(const ArrayStack<T>&);
 
